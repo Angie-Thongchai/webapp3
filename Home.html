@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Home</title>
+        <style>
+            .bg{
+                position: absolute;
+                width: 100%;
+                height: 1000px;
+                animation: picture infinite;
+                animation-duration: 4s;                
+            }
+
+            @keyframes picture{
+                0% {background-image:  url("Bali.jpg");}
+                25% {background-image: url("NY.jpg");}
+                50% {background-image: url("Barce.jpg");}
+                75% {background-image: url("Tokyo.jpg");}
+                100% {background-image: url("ND.jpg");}
+            }
+            .box{
+                background-color: white;
+                border-radius: 8px;
+                padding-bottom: 20px;
+                margin-top: 70px;
+                margin-left: 50px;
+                margin-right: 100px;
+                animation: appear 5s linear forwards;
+                
+            }
+            @keyframes appear{
+                0%{ opacity: 0;}
+                25%{ opacity: 0;}
+                50%{ opacity: 0.5;}
+                100%{ opacity: 1;}
+
+            }
+            h1{
+                padding-top: 30px;
+                text-align: center;
+                font-size: 50px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            img{ border-radius: 8px;
+            }            
+            .gallery{
+                margin-top: 20px;
+                border: 5px solid blue;
+                border-radius: 8px;
+            }
+            .gallery:hover{
+                border: 5px solid black;
+                border-radius: 8px;
+            }
+            .gallery img{
+                width: 100%;
+                height: auto;
+            }
+            .dec{
+                background-color: white;
+                padding: 15px;
+                text-align: center;
+            }
+            *{
+                box-sizing: border-box;
+            }
+            .responsive{
+                position: relative;
+                padding: 3px;
+                margin-left: 70px;
+                float: left;
+                width: 40%;
+                height: auto;
+                display: grid;
+            }
+            @media only screen and (max-width: 700px;){
+                .responsive{
+                    width: 50%;
+                    margin: 6px 0;
+                }
+            }
+            @media only screen and (max-width: 500px) {
+                .responsive{
+                    width: 100%;
+                }
+            }
+            .clearfix:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .footer{
+                position: relative;
+                background-color: rgb(174, 251, 254);    
+                border-radius: 8px;
+                margin-top: 40px;
+            }
+            .text{
+                padding-top: 2px;
+                padding-bottom: 5px;
+                margin-top: 10px;
+                font-size: 18px;
+                text-align: center;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="bg">
+            <div class="box"><h1><b>Let's travel</b></h1> 
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="amarica.html">
+                        <img src="NY.jpg" alt="Amarica" width="400px" height="400px">
+                    </a>
+                    <div class="dec">
+                        <a href="amarica.html">Amarica</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="europe.html">
+                        <img src="Barce.jpg" alt="Europe" width="400px" height="400px">
+                    </a>
+                    <div class="dec">
+                        <a href="europe.html">Europe</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="Asiasn.html">
+                        <img src="Tokyo.jpg" alt="Asia" width="400px" height="400px">
+                    </a>
+                    <div class="dec">
+                        <a href="Asiasn.html">Asia</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="Aus.html">
+                        <img src="Bali.jpg" alt="Australia" width="400px" height="400px">
+                    </a>
+                    <div class="dec">
+                        <a href="Aus.html">Australia</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer">
+                <div class="text">
+                    <p><b>Contact</b></p>
+                    <p>Thongchai Jandee</p>
+                    <p>Krigsstigen 14</p>
+                    <p>182 73 Stocksund</p>
+                    <p>Stockholm Sweden</p>
+                    <p>AngjyThongchaijandee@outlook.com</p>
+                    <p>072 835 0991</p>
+                </div>
+            </div>    
+
+        </div>
+
+    </body>
+</html>

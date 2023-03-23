@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Australia</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                position: absolute;
+                background-color: rgb(161, 155, 5);
+                padding: 20px;
+            }
+            .bg{
+                max-width: 1000px;
+                margin: auto;
+            }
+            #txt{
+                font-size: 100px;
+                color: white;
+                text-decoration: underline;
+                text-decoration-thickness: 40px;
+                padding-left: 30px;
+                animation-name: grow;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes grow {
+                from {
+                    font-size: 0px;
+                }
+                to  {
+                    font-size: 100px;
+                }
+            }
+            .row{
+                margin: 8px -16px;
+                position: relative;
+                margin-left: 80px;
+            }
+            .row, .row>.column{
+                padding: 25px;
+            }
+            .column{
+                float: left;
+                width: 50%;
+            }
+            .row:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .content{
+                background-color: white;
+                padding: 10px;
+            }
+            @media screen and (max-width:900px) {
+                .column{
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width:600px) {
+                .column{
+                    width: 100%;
+                }
+            }
+            #fivedays{
+                background-color: rgb(94, 221, 101);
+                height: auto;
+                width: 370px;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #sevendays{
+                background-color: rgb(94, 221, 101);
+                height: auto;
+                width: 370px;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #fivedaysN{
+                background-color: rgb(94, 221, 101);
+                height: auto;
+                width: 370px;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #sevendaysN{
+                background-color: rgb(94, 221, 101);
+                height: auto;
+                width: 370px;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .footer{
+                position: relative;
+                background-color: rgb(226, 252, 58);    
+                border-radius: 8px;
+                margin: 8px -16px;
+                margin-left: 80px;
+            }
+            .text{
+                padding-top: 2px;
+                padding-bottom: 5px;
+                margin-top: 10px;
+                font-size: 18px;
+                text-align: center;
+            }
+            .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+                }
+
+            .overlay-content {
+                    position: relative;
+                    top: 25%;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 30px;
+            }
+
+            .overlay a {
+                    padding: 8px;
+                    text-decoration: none;
+                    font-size: 36px;
+                    color: #818181;
+                    display: block;
+                    transition: 0.3s;
+            }
+
+            .overlay a:hover, .overlay a:focus {
+                    color: #f1f1f1;
+            }
+
+            .overlay .closebtn {
+                    position: absolute;
+                    top: 20px;
+                    right: 45px;
+                    font-size: 60px;
+            }
+
+            @media screen and (max-height: 450px) {
+                    .overlay a {font-size: 20px}
+                    .overlay .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                    }
+            }
+            span{
+                background-color: white;
+                position: relative;
+                border-radius: 8px;
+                text-align: center;
+                display: grid;
+                margin: 8px -16px;
+                margin-left: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+            <div id="txt">
+                <h1><b>Australia</b></h1>
+            </div>   
+            <div class="row">
+                <div class="column">
+                    <div class="content">
+                      <img src="sydney.jpg" alt="city" width="370px" height="350px">
+                      <h2>Sydney</h2>
+                    
+                      <p>Sydney is the largest and most populous city in 
+                        Australia and the state capital of New South Wales. 
+                        Sydney is located on Australia's south-east coast of the Tasman Sea. 
+                        Inhabitants of Sydney are called Sydneysiders, comprising a cosmopolitan 
+                        and international population of people from numerous places around the world. </p>  
+                         <div id="fivedaysN">
+                            <h3>5 days trip</h3>
+                            <p>Price: 31 000kr</p>
+                            <p>Activities: City and Surrounding -The Rocks -Sydney Harbour Bridge and Manly</p>
+                            <button onclick="buy">buy</button>
+                         </div>
+                         <button onclick="showElementN5()">5 days</button>
+                         <div id="sevendaysN">
+                            <h3>7 days trip</h3>
+                            <p>Price: 42 000kr</p>
+                            <p>Activities: City and Surrounding -The Rocks -Sydney Harbour Bridge and Manly - Darling Harbour and Chinatown</p>
+                            <button onclick="buy">buy</button>
+                         </div>
+                        <button onclick="showElementN7()">7days</button> 
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                      <img src="melbourne.jpg" alt="city" width="370px" height="350px">
+                      <h2>Melbourne</h2>
+                      <p>Melbourne is the capital city of Victoria, and Australia's second-largest city.
+                         Focused around a central city, Greater Melbourne's area of approximately 9900 km² 
+                         of suburbs spread more than 40 km to the south, 30 km to the east, 20 km to 
+                         the north and sprawl across vast, flat basalt plains to the west..</p>  
+
+                         <div id="fivedays">
+                            <h3>5 days trip</h3>
+                            <p>Price: 30 000kr</p>
+                            <p>Activities: Melbourne Aquarium - Quay West Suites Melbourne - Melbourne Zoo</p>
+                            <button onclick="buy">buy</button>
+                         </div>
+                         <button onclick="showElement5()">5 days</button>
+                         <div id="sevendays">
+                            <h3>7 days trip</h3>
+                            <p>Price: 40 000kr</p>
+                            <p>Activities: Melbourne Aquarium - Quay West Suites Melbourne - Melbourne Zoo 
+                                - Puffing Billy Railway - Lakeside Cottage Luxury B&B
+                            </p>
+                            <button onclick="buy">buy</button>
+                         </div>
+                        <button onclick="showElement7()">7days</button>
+                    </div>
+                </div>        
+            </div> 
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="Home.html">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Membership</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <div class="footer">
+                <div class="text">
+                    <p><b>Contact</b></p>
+                    <p>Thongchai Jandee</p>
+                    <p>Krigsstigen 14</p>
+                    <p>182 73 Stocksund</p>
+                    <p>Stockholm Sweden</p>
+                    <p>AngjyThongchaijandee@outlook.com</p>
+                    <p>072 835 0991</p>
+                </div>
+            </div>    
+        </div>
+        <script  type="text/javascript">
+            var x = document.getElementById("fivedays");
+                      console.log(x)
+                   x.style.display="none"
+
+            function showElement5() {
+                var x = document.getElementById("fivedays");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            var x = document.getElementById("sevendays");
+                      console.log(x)
+                   x.style.display="none"
+
+            function showElement7() {
+                var x = document.getElementById("sevendays");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            var x = document.getElementById("fivedaysN");
+                      console.log(x)
+                   x.style.display="none"
+
+            function showElementN5() {
+                var x = document.getElementById("fivedaysN");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            var x = document.getElementById("sevendaysN");
+                      console.log(x)
+                   x.style.display="none"
+
+            function showElementN7() {
+                var x = document.getElementById("sevendaysN");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+                }
+                function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+                }    
+        </script>
+    </body>
+</html>
